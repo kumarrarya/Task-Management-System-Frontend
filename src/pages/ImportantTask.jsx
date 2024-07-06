@@ -11,7 +11,7 @@ function ImportantTask() {
   useEffect(()=>{
     try {
       const fetch = async ()=>{
-        const response = await axios.get("http://localhost:3000/api/v2/get_imp_tasks",
+        const response = await axios.get("https://task-management-system-backend-9p9j.onrender.com/api/v2/get_imp_tasks",
           {headers,}
         );
         setData(response.data.data);

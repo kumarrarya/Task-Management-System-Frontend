@@ -44,7 +44,7 @@ function Sidebar() {
     authorization:`Bearer ${localStorage.getItem("token")}`};
   useEffect(()=>{
     const fetch = async ()=>{
-      const response = await axios.get("http://localhost:3000/api/v2/get_all_tasks",{
+      const response = await axios.get("https://task-management-system-backend-9p9j.onrender.com/pi/v2/get_all_tasks",{
         headers,
       });
       setData(response.data.data);

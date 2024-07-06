@@ -15,7 +15,7 @@ function Card({home, setinputDiv , data, setupdatedData}) {
     const handleCompleteTask = async (id)=> {
     try {
         console.log("id:",id);
-        await axios.put(`http://localhost:3000/api/v2/update_com_task/${id}`,
+        await axios.put(`https://task-management-system-backend-9p9j.onrender.com/api/v2/update_com_task/${id}`,
             {},
             {headers}
         );
@@ -26,7 +26,7 @@ function Card({home, setinputDiv , data, setupdatedData}) {
     }
     const handleImportant = async (id)=> {
         try {
-            const respone=await axios.put(`http://localhost:3000/api/v2/update_imp_task/${id}`,
+            const respone=await axios.put(`https://task-management-system-backend-9p9j.onrender.com/api/v2/update_imp_task/${id}`,
                 {},
                 {headers}
             );
@@ -38,7 +38,7 @@ function Card({home, setinputDiv , data, setupdatedData}) {
 
     const deleteTask = async(id)=>{
         try {
-            const respone=await axios.delete(`http://localhost:3000/api/v2/delete_task/${id}`,
+            const respone=await axios.delete(`https://task-management-system-backend-9p9j.onrender.com/api/v2/delete_task/${id}`,
                 {headers}
             );
             console.log(respone);

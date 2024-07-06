@@ -20,7 +20,7 @@ function InputData({InputDiv , setinputDiv, updatedData , setupdatedData}) {
       alert("All Fields Required");
     }
     else{
-      await  axios.post("http://localhost:3000/api/v2/create_task",Data,{headers});
+      await  axios.post("https://task-management-system-backend-9p9j.onrender.com/api/v2/create_task",Data,{headers});
       setData({title:"",desc:""});
       setinputDiv("hidden");
     }
@@ -30,7 +30,7 @@ function InputData({InputDiv , setinputDiv, updatedData , setupdatedData}) {
       alert("All Fields Required");
     }
     else{
-      await  axios.put(`http://localhost:3000/api/v2/update_task/${updatedData.id}`,Data,{headers});
+      await  axios.put(`https://task-management-system-backend-9p9j.onrender.com/api/v2/update_task/${updatedData.id}`,Data,{headers});
       setData({title:"",desc:""});
       setupdatedData({
         id:"",
